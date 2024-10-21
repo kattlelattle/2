@@ -189,23 +189,41 @@ body {
     justify-content: center; /* Center children vertically */
 }
 
+/* Basic styles for the footer */
 .site-footer {
-    background-color: #573146; /* Dark color for contrast */
-    color: white; /* White text for visibility */
-    text-align: center; /* Center the text */
-    padding: 10px 0; /* Padding around the text */
-    position: fixed; /* Keep the footer fixed at the bottom */
-    bottom: 0; /* Position it at the bottom of the page */
-    width: 100%; /* Full width of the page */
-    font-size: 16px; /* Font size */
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px; /* Add space above the footer */
 }
 
 .site-footer a {
-    color: white; /* White text for the email link */
-    text-decoration: none; /* Remove underline from the link */
+    color: #333;
+    text-decoration: none;
 }
 
 .site-footer a:hover {
-    text-decoration: underline; /* Underline on hover */
+    color: #0056b3;
 }
 
+/* Ensures the footer stays at the bottom of the content, not the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex-grow: 1;
+}
+
+footer {
+    flex-shrink: 0; /* Keep the footer at the bottom of the page */
+}
+
+/* Add some basic styling to make the content and footer behave as expected */
+.mission-section {
+    flex-grow: 1; /* Push the footer down if needed */
+}
